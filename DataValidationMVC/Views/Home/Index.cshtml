@@ -1,0 +1,26 @@
+﻿
+@model DataValidationMVC.Models.Employee
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("SubmitData", "Home"))
+        {
+                
+        @Html.TextBox("Name")<br /><br />
+         @Html.ValidationMessage("Name")
+        @Html.TextBox("Email")<br /><br />
+        @Html.ValidationMessage("Email")
+        @Html.Editor("Age")<br /><br />
+         @Html.ValidationMessage("Age")
+        <br />
+        <input type="submit" value="Click Me" />
+        }
+    </div>
+</body>
+</html>
